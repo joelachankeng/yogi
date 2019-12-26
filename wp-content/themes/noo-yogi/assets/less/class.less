@@ -1,0 +1,517 @@
+// Class Listing page
+
+// Class details
+
+.single-noo_class {
+  .noo_class {
+    .noo-social {
+      .translate(0 ,50%);
+      &:before {
+        height: 0!important;
+        top: 0!important;
+      }
+      a {
+        top: 8px;
+      }
+    }
+    .content-footer {
+      margin-top: 0;
+      #author-bio {
+        background: @gray-lighter;
+        padding: 50px @grid-gutter-width;
+        border-top: 1px solid @border-color-base;
+        .view-profile {
+          color: @brand-primary;
+          &:hover {
+            color: #000;
+          }
+        }
+
+      }
+    }
+    .timetable_week{
+      margin-bottom: 20px;
+      table{
+        width: 100%;
+
+        @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+        th,td{
+          vertical-align: top;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        tr.day_wrap{
+          &.day-even {
+            background: #f5f5f5;
+          }
+          &.day-odd + .day-odd,
+          &.day-even + .day-even {
+            td {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+      h4{
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        position: relative;
+        &:before{
+          content: '';
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          display: block;
+          background: #dbdada;
+        }
+        span{
+          position: relative;
+          background: #fff;
+          padding: 0 10px;
+        }
+      }
+      .day{
+        .border-radius(12px);
+        // background: @gray-lighter;
+        color:@brand-primary;
+        padding: 4px 8px;
+        text-transform: capitalize;
+      }
+
+      .res-sche-content {
+      
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+
+      .item-weekday {
+
+        background-color: #f5f5f5;
+        padding: 5px 10px;
+        color: @brand-primary;
+        margin: 5px 0;
+
+        &.today {
+          background: #fcf8e3;
+        }
+      }
+      .item-day {
+        
+        position: relative;
+        padding: 10px 0 10px 10px;
+        font-size: 15px;
+
+        .time {
+          color: #333;
+        }
+
+        i {
+          margin-left: 5px;
+          font-weight: 300;
+        }
+        
+        .address {
+          margin-left: 5px;
+
+          @media screen and (max-width: 479px) {
+            display: none;
+          }
+        }
+
+      }
+      
+    }
+
+    }
+  }
+  
+  .single-sidebar {
+    .class-info-sidebar {
+      > div {
+        padding: 10px 0;
+        border-bottom: 1px solid @border-color-base;
+        i {
+          color: @brand-primary;
+          padding-right: 8px;
+        }
+        span {
+          float: right;
+          color: @brand-primary;
+          padding: 0 8px;
+          .border-radius(12px);
+          background: @gray-lighter;
+          margin-left: 5px;
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+        &.tag-days {
+          .wrap-days {
+            float: right;
+            span {
+              float: left;
+            }
+          }
+        }
+      }
+    } 
+    .register_button {
+      width: 100%;
+      margin-top: @grid-gutter-width;
+      padding: 15px 0;
+    }   
+  }
+  .related-class {
+    position: relative;
+    .related-title {
+      .custom-title(18px);
+    }
+    .noo-class-slider-content {
+      .noo-class-slider-item {
+        .class-slider-featured {
+          img {
+            @media (max-width: @screen-sm-max){
+              width: 100%;
+            }
+          }
+        }
+        .class-slider-content {
+          background: @gray-lighter;
+          padding: @grid-gutter-width / 2;
+          .class-slider-category a {
+            color: @brand-primary;
+            &:hover {
+              color: #000;
+            }
+          }
+          .class-slider-title {
+            font-size: @font-size-large;
+            text-transform: uppercase;
+            line-height: @line-height-base;
+          }
+        }
+      }
+    }
+
+    .slider-indicators{
+      position: absolute;
+      right: @grid-gutter-width;
+      top: 220px;
+      @media (max-width: @screen-sm-max){
+        top: 80px;
+      }
+      a{
+        .transition(all 0s ease 0s);
+        background: #fff;
+          display: inline-block;
+          height: 10px;
+          width: 10px;
+          text-indent: -999em;
+          .border-radius(50%);
+          float: left;
+          margin: 0 5px;
+
+          &.selected{
+            // border:2px solid #fff;
+            background: @brand-primary;
+          }
+      }
+
+    }
+  }
+}
+
+// Style Class listing
+
+.noo-classes {
+  &.list {
+    .hentry {   
+      margin: 0;
+      margin-bottom: @grid-gutter-width;
+      padding-bottom: 0;
+      .loop-item-wrap {
+        background: @gray-lighter;
+      }
+    }
+  }
+}
+
+// Style  Schedule
+
+.noo-class-schedule-shortcode .fc-agenda-view:not(.fc-agendaDay-view) .fc-body .fc-time-grid .fc-event.time-short-1:hover .fc-content .fc-category,
+.noo-class-schedule-shortcode .fc-agenda-view:not(.fc-agendaDay-view) .fc-body .fc-time-grid .fc-event.time-short-2:hover .fc-content .fc-category {
+  display: none;
+}
+
+.noo-class-schedule-shortcode .fc-view .fc-body .fc-time-grid .fc-event .fc-content .fc-time {
+  font-size: 11px;
+}
+
+.noo-class-schedule-shortcode.background-event .fc-view .fc-body .fc-time-grid .fc-event .fc-content .fc-trainer {
+  font-size: 12px;
+  white-space: normal;
+}
+
+.noo-class-schedule {
+  .class-schedule-filter {
+
+    padding: @grid-gutter-width 0;
+
+    &.noo-filters ul li a.selected:before {
+      display: none;
+    }
+
+    ul {
+      li {
+        float: none;
+        display: inline-block;
+        a {
+          border: 2px solid #8f8f8f;
+          padding: @grid-gutter-width / 2 @grid-gutter-width;
+          text-transform: uppercase;
+          display: block;
+          &.selected,
+          &:hover,
+          &.active
+          {
+            background: @brand-primary;
+            border-color: @brand-primary;
+            color: #fff;
+          }
+          @media (max-width: @screen-sm-max){
+            padding: 5px 10px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.noo-class-schedule-shortcode {
+  .fc-toolbar {
+    .fc-button {
+      color: #333 !important;
+      background: #fff !important;
+    }
+  }
+}
+
+.noo-responsive-schedule-wrap {
+  .res-sche-navigation {
+    .prev,
+    .next {
+      color: #333 !important;
+      background: #fff !important;
+    }
+  }
+}
+
+.md-content h3 {
+  color: #333 !important;
+}
+
+.noo_class .content-meta{
+  .post-type-archive-noo_class &{
+    @media (min-width: @screen-md){
+      >span{
+        float: left;
+        min-width: 45%;
+      }
+    }
+  }
+  .single-noo_class &{
+    span{
+      color: @link-hover-color;
+    }
+  }
+  
+}
+
+.post-type-archive-noo_class {
+  @media (max-width: @screen-md-max){
+    .content-meta span:nth-child(2) {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fc-month-view .fc-scroller {
+    height: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+  }
+
+}
+
+
+/**
+ * Responsive Schedule
+ * --------------------------------------------------
+ */
+
+.noo-class-schedule {
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.noo-responsive-schedule-wrap {
+
+  padding: 0 15px;
+  
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  a {
+    .transition(all 0.2s ease 0s);
+    &:focus,
+    &:hover {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  .res-sche-content {
+    &.overlay-loading-tripped {
+      background-color: #eee;
+    }
+  }
+
+  .res-sche-navigation {
+    position: relative;
+    height: 20px;
+    margin: 20px 0;
+
+    h3 {
+      color: #454545;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-top: 5px;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      white-space: nowrap;
+      .translate(-50%, 0);
+
+      @media screen and (max-width: 479px) {
+        white-space: normal;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 319px) {
+        display: none;
+      }
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 0;
+
+      .border-radius(50%);
+      width: 30px;
+      height: 30px;
+      .transition(all 0.3s ease 0s);
+      text-align: center;
+      line-height: 30px;
+      font-size: 10px;
+      border: 1px solid #bfbfbf;
+      border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+
+      &:focus,
+      &:hover {
+        background-color: @brand-primary;
+        color: @white;
+      }
+
+      i {
+        font-size: 12px;
+        font-weight: bold;
+        display: inline;
+        vertical-align: baseline;
+        line-height: 28px;
+        margin: 0;
+
+      }
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+  }
+
+  .item-weekday {
+
+    background-color: #F5F5F5;
+    padding: 5px 10px;
+    color: #333;
+    margin: 5px 0;
+    border-left-color: #B9B7B7;
+
+    &.today {
+      background: #fcf8e3;
+    }
+  }
+  .item-day {
+    
+    position: relative;
+    padding: 3px 0 3px 20px;
+    font-size: 15px;
+    font-size: 14px;
+
+    @media screen and (max-width: 479px) {
+      font-size: 12px;
+    }
+
+    span {
+      color: #333;
+    }
+
+    i {
+      font-weight: 300;
+
+      @media screen and (max-width: 479px) {
+        display: none;
+      }
+    }
+
+    a {
+      margin-left: 10px;
+    }
+
+    .item-ribbon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      border: 1px solid #fff;
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+  }
+}
+
+// Overlay Loading Tripped
+.overlay-loading-tripped {
+  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+  .animation(progress-bar-stripes 0.4s linear infinite);
+}

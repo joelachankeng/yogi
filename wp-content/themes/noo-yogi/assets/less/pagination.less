@@ -1,0 +1,121 @@
+/**
+ * 6.0 - Wordpress part
+ *  6.5 - pagination
+ */
+
+.pagination{
+	 display:table;
+	 padding-left: 0;
+	 margin:@line-height-computed auto;
+	 line-height: 40px;
+	.page-numbers{
+		color: @headings-color;
+		background: @gray-lighter;
+	    padding: 0 1.2em;
+	    text-transform: uppercase;
+	    float: left;
+	    font-weight: @font-weight-bold;
+	    margin: 0 5px;
+		text-align: center;
+	    &.current{
+	    	background: @brand-primary;
+	    	color: @white;
+	    }
+	    &.dots{
+	    	border:none;
+	    	border-radius: 0px;
+	    	color: @text-color;
+	    	padding-left: ((10px / @font-size-root)+@font-unit);
+	    	padding-right: ((10px / @font-size-root)+@font-unit);
+	    }
+	}
+	a.page-numbers{
+		text-decoration: none;
+		color: @text-color;
+		&:hover{
+			background: @link-color;
+	    	color: #ffffff;
+		}
+	}
+}
+
+.loadmore-action{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: @line-height-computed auto;
+	line-height: 3;
+	font-size: @font-size-base;
+	.loadmore-loading{
+		display: none;
+	}
+	~ .pagination{
+		display: none;
+	}
+}
+
+
+// Infinite scroll loading
+.loadmore-loading {
+	position:relative;
+	height: 25px;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	&.finished {
+		width: auto;
+	}
+	span {
+		display:block;
+		bottom: 0;
+		width: 9px;
+		height: 5px;
+		background: @link-color;
+		position:absolute;
+		.animation( preload_audio_wave 1.5s  infinite ease-in-out );
+	}
+
+	span:nth-child(2){
+		left:11px;
+		.animation-delay(.2s);
+
+	}
+	span:nth-child(3){
+		left:22px;
+		.animation-delay(.4s);
+	}
+	span:nth-child(4){
+		left:33px;
+		.animation-delay(.6s);
+	}
+	span:nth-child(5){
+		left:44px;
+		.animation-delay(.8s);
+	}
+}
+@keyframes preload_audio_wave {
+	0% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+	25% {height:30px;transform:translateY(15px);background:@link-hover-color;}
+	50% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+	100% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+}
+@-webkit-keyframes preload_audio_wave {
+    0% {height:5px;-webkit-transform:translateY(0px);background:@link-hover-color;}
+    25% {height:30px;-webkit-transform:translateY(15px);background:@link-hover-color;}
+    50% {height:5px;-webkit-transform:translateY(0px);background:@link-hover-color;}
+    100% {height:5px;-webkit-transform:translateY(0px);background:@link-hover-color;}
+}
+
+@-moz-keyframes preload_audio_wave {
+    0% {height:5px;-moz-transform:translateY(0px);background:@link-hover-color;}
+    25% {height:30px;-moz-transform:translateY(15px);background:@link-hover-color;}
+    50% {height:5px;-moz-transform:translateY(0px);background:@link-hover-color;}
+    100% {height:5px;-moz-transform:translateY(0px);background:@link-hover-color;}
+}
+
+@keyframes preload_audio_wave {
+    0% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+    25% {height:30px;transform:translateY(15px);background:@link-hover-color;}
+    50% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+    100% {height:5px;transform:translateY(0px);background:@link-hover-color;}
+}

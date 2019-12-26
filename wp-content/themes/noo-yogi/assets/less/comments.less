@@ -1,0 +1,321 @@
+/**
+ * 6.0 - Wordpress part
+ *  6.4 - comments
+ */
+
+//----------------------------------------------------------------------------//
+// NOO Framework / Less / Wordpress / Comments
+//
+// This file is less styling for Comments
+//
+//----------------------------------------------------------------------------//
+
+
+// Basic Structure
+//----------------------------------------------------------
+
+// Comments Area
+.comments-area { 
+	margin-top: @grid-gutter-width;
+	padding: @grid-gutter-width 0;
+
+	> .comment-respond{
+		.comment-form-fields{
+			&:extend(.clearfix all);
+			.comment-form-input {
+				// width: 100%;
+				float: left;
+			}
+			.comment-form-textarea{
+				
+				label {
+					display: none;
+				}
+				textarea {
+					// margin-bottom: 0;
+					// margin-top: 24px;
+				}
+			}
+
+			@media (max-width:767px) {
+				.comment-form-input,
+				.comment-form-textarea{
+					float: none;
+					// width: 100%;
+					padding: 0;
+				}
+				.comment-form-textarea{
+					label {
+						display: block;
+					}
+					textarea {
+						margin-bottom: 20px;
+						margin-top: 0px;
+					}
+				}
+			}
+			&.comment-form-in-as{
+				.comment-form-textarea{
+					float: none;
+					// width: 100%;
+					padding: 0;
+					label {
+						display: block;
+					}
+					textarea {
+						margin-bottom: 20px;
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: none;
+	}
+	@media (max-width: @screen-sm-min) {
+		padding: (@grid-gutter-width / 2);
+	}
+}
+
+// Comment Title
+
+.comments-title {
+	// text-transform: uppercase;
+	text-transform: uppercase;
+	span {
+		color: @brand-primary;
+	}
+}
+
+// Comments List
+//----------------------------------------------------------
+.comments-list,
+.comments-list .children {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+// Comment wrapper ( Li )
+li.comment {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid @border-color-light;
+}
+
+// Child comments.
+.comments-list .children {
+	@media (min-width: @grid-float-breakpoint) {
+	    // border-left: 1px solid @comment-boder-color;
+	    padding-left: 100px;
+	    position: relative; 
+	}
+	li.comment {
+		border-bottom: 0;
+		border-top: 1px solid @border-color-light;
+	}
+}
+
+// Gravatar image.
+.comment-img {
+	float: left;
+	img {
+		.border-radius(50%);
+		z-index: 2;
+		position: relative;
+	}
+	@media (max-width: @screen-xs-max){
+		float: none;
+	}
+}
+
+
+// Comment content
+.comment-wrap{
+	position: relative;
+	padding: @grid-gutter-width 0;
+	@media (max-width: @grid-float-breakpoint-max) {
+		padding: 7%;
+	}
+	@media (max-width: @screen-xs-max) {
+		padding: 0;
+	}
+}
+.comment-block {
+	padding: 0;
+	margin: 0 0 0 100px;
+	@media (max-width: @screen-xs-max) {
+		margin: @grid-gutter-width/2 0;
+	}
+}
+
+.comment-header {
+	padding-bottom: @padding-base-vertical;
+	display: inline-flex;
+	span.pull-right{
+		margin-top: 6px;
+	}
+	@media (max-width: @screen-xs-max) {
+		padding: 10px 0;
+	}
+}
+
+.comment-content {
+	position: relative;
+}
+
+.comment-author {
+	margin-right: @grid-gutter-width/2;
+	font-weight: @font-weight-bold;
+	a {
+		color: @text-color;
+		font-weight: bold;
+
+		&:hover {
+			color: @link-hover-color;
+		}
+	}
+}
+
+.ispostauthor {
+	background: none repeat scroll 0 0 @brand-primary;
+    color: @white;
+    padding: 0px 5px;
+    margin-left: 10px;
+    border-radius:@border-radius-base;
+}
+
+.comment-meta {
+	position: relative;
+	margin: 0;
+	padding-left: 20px;
+	padding-right: 15px;
+	color: #8f8f8f;
+	time:before {
+		content: ".";
+		position: absolute;
+		font-size: 30px;
+		top: -23px;
+		left: 0;
+		color: @brand-primary;
+		.opacity(0.7);
+	}
+	@media (max-width: @screen-xs-max) { 
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.comment-pending {
+	padding: @padding-base-vertical @padding-base-horizontal;
+	text-align: center;
+	color: @link-color;
+	background-color: @gray-lighter;
+	border-radius: @border-radius-base;
+}
+
+
+// Comment Reply
+//----------------------------------------------------------
+.comment-reply-link{
+	border-radius:@border-radius-base;
+	color: #696969;
+	padding: 5px 0;
+	.opacity(0.7);
+	i{
+		margin-right: @grid-gutter-width/3;
+	}
+	&:hover{
+		color: @link-hover-color;
+		.opacity(1);
+	}
+}
+#respond {
+	margin-bottom: 50px;
+	margin-top: 50px;
+
+	.required {
+		position: relative;
+		color: @link-color;
+	}
+}
+.comment-reply-title{
+	font-weight: @font-weight-base;
+	text-transform: uppercase;
+	font-size: @font-size-h3;
+	font-family: @headings-font-family;
+	padding-bottom: (@grid-gutter-width /2);
+	small {
+		font-size: @font-size-base;
+	}
+}
+
+#commentform {
+	margin-bottom: 0;
+}
+
+.comment-notes{
+	.clearfix();
+}
+.comment-notes,
+.logged-in-as {
+	margin-bottom: 20px;
+	// font-size: @font-size-small;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-rating,
+.comment-form-comment {
+	margin: 0;
+	label {
+		font-weight: 300;
+		.required {
+		}
+	}
+}
+
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	input {
+		margin-bottom: 20px;
+		font-style: italic;
+	    width: 100%;
+	}
+}
+
+.comment-form-comment {
+	textarea {
+	    margin-bottom: 20px;
+	    margin-top: 0px;
+	    font-style: italic;
+	    height: 150px;
+	    resize: none;
+	    width: 100%;	    
+	}
+}
+
+.form-submit {
+	margin: 0;
+	input[type="submit"] {
+		.btn();
+		.btn-primary();
+		padding: 10px (1.5*@grid-gutter-width);
+		text-transform: uppercase;
+		font-size: @font-size-base - 1;
+		&:hover,
+		&:focus {
+			background:@link-color;
+			color: #ffffff;
+			border-color: @link-color;
+		}
+	}
+}

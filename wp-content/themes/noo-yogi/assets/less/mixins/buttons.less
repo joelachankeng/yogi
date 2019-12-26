@@ -1,0 +1,112 @@
+// Button variants
+// Button default
+.btn(){
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 0px solid transparent;
+  white-space: nowrap;
+  background: #e7e7e7;
+  text-transform: uppercase;
+  .button-size(@padding-large-vertical; 3em ; @font-size-base; @line-height-base; 0);
+  .user-select(none);
+  .transition(border-color color 0.2s ease);
+  &:hover,
+  &:focus{
+    outline: 0;
+    background: @gray-light;
+    .box-shadow(none)!important;
+  }
+}
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @white;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+    .box-shadow(none);
+  }
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default() {
+  .btn();
+  .button-variant(@btn-default-color; @btn-default-bg; 0);
+}
+.btn-primary() {
+  .btn();
+  .button-variant(@btn-primary-color; @btn-primary-bg; 0);
+  &:hover,&:focus{
+    outline: 0;
+    background: @gray-light;
+  }
+}
+.btn-black() {
+  .btn();
+  .button-variant(#fff; #000; #000);
+  &:hover,&:focus{
+    outline: 0;
+    background: @gray-light;
+    border-color: @gray-light;
+  }
+}
+
+
+.btn-white() {
+  .btn();
+  .button-variant(#000; #fff; #fff);
+  &:hover,&:focus{
+    outline: 0;
+    color: #fff;
+    background: @gray-light;
+    border-color: @gray-light;
+  }
+}
+// Success appears as green
+.btn-success() {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info() {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning() {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger() {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+.btn-darker(){
+  .btn();
+  background: @gray;
+  &:hover,&:focus{
+    outline: 0;
+    background: @brand-primary;
+  }
+}
+

@@ -1,0 +1,59 @@
+
+
+
+//
+// Topbar
+// 
+.noo-topbar {
+	position: relative;
+	background: @topbar-bg;
+	z-index: @zindex-navbar + 1;
+	line-height: @topbar-height;
+	@media (max-width: @navbar-float-breakpoint-max) {
+		display: none;
+	}
+	.navbar-nav li > a:before{
+		display: none;
+	}
+	.topbar-left {
+		font-size: @font-size-small;
+		color: @topbar-color;
+		margin: 0;
+	}
+	a{
+		color: @topbar-link-color;
+		&:hover{
+			color: @topbar-link-hover-color;
+		}
+	}
+}
+
+
+// ---------------------------------------------------------
+// Heading
+// ---------------------------------------------------------
+ 
+.noo-page-heading {
+	position: relative;
+	padding: 50px 0 0;
+	.background-cover(true);
+	background-position: center center;
+	@media (max-width: @screen-sm-max){
+		padding: 120px 0;
+	}
+	@media (max-width: @screen-xs-max){
+		padding: 100px 0;
+	}
+	.page-title{
+		.custom-title(@size: 48px);
+		@media (max-width: @screen-sm-max){
+			font-size: @font-size-h2;
+		}
+	}
+
+	&.heading-bg-image {
+		padding: 180px 0;
+	}
+}
+
+

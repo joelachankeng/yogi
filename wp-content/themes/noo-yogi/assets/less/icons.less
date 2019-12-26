@@ -1,0 +1,43 @@
+ /**
+ * 7.0 - Library
+ *  7.2 - icon
+ */
+
+// =============================================================================
+// Font Awesome
+// =============================================================================
+@font-face {
+	font-family: 'fontawesome';
+	src: url('../fonts/font_awesome/font-awesome.eot?v=4.0.3');
+	src: url('../fonts/font_awesome/font-awesome.eot?#iefix&v=4.0.3') format("embedded-opentype"),
+	url('../fonts/font_awesome/font-awesome.woff?v=4.0.3') format("woff"),
+	url('../fonts/font_awesome/font-awesome.ttf?v=4.0.3') format("truetype"),
+	url('../fonts/font_awesome/font-awesome.svg?#fontawesome&v=4.0.3') format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// ---------------------------------------------------------
+// Social Style
+// ---------------------------------------------------------
+.noo-social {
+	line-height: 1;
+	&:extend(.clearfix all);
+	.translate3d(0, 0, 0); 
+	a {
+		// display: inline-block;
+		text-align: center;
+		margin-left: 0.5em;
+		text-decoration: none;
+		i{
+			background: @background-color-base;
+			height: 1.7em;
+		    line-height: 1.7em;
+		    width: 1.7em; 
+		}
+	}
+
+	a:first-child {
+		margin-left: 0px;
+	}
+}

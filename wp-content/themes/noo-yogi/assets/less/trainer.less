@@ -1,0 +1,346 @@
+ /**
+ * 10.0 - Trainer file
+ */
+@import "variables.less";
+@import "mixins.less";
+.trainer-details {
+
+	//info
+	.trainer-info {
+		float: left;
+		.view_class {
+			float: right;
+			color: @brand-primary;
+			position: absolute;
+			right: @grid-gutter-width/2;
+			top: 10px;
+			&:hover {
+				color: #000;
+			}
+			@media(max-width: @screen-xs-max){
+				float: none;
+				position: static;
+				padding: 10px 0;
+			}
+		}
+		.trainer-category {
+			position: relative;
+			padding-bottom: 10px;
+			margin-bottom: @grid-gutter-width / 2;
+			width: 100%;
+			a {
+				font-weight: normal;
+				padding-right: @grid-gutter-width / 2;
+				margin-right: 10px;
+				position: relative;
+				&:before {
+					content: "/";
+					position: absolute;
+					right: 0;
+				}
+				&:last-child {
+					&:before {
+						content: "";
+					}
+				}			
+			}
+
+			&:before {
+				content: "";
+				background: @brand-primary;
+				width: 25px;
+				height: 1px;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+		> div {
+			line-height: 2.2em;
+			width: 100%;
+			span {
+				font-weight: bold;
+				width: 20%;
+  				display: inline-block;
+  				@media (max-width: @screen-xs-max) {
+  					width: 100%;
+  				}
+			}
+			&.trainer-biography {
+				span {
+					float: left;
+				}
+				div {
+					width: 80%;
+					float: left;
+					line-height: @line-height-base;
+				}
+			}
+		}
+		.trainer-social {
+			text-align: left;
+			float: left;
+			padding-top: @grid-gutter-width;
+			h5 {
+				width: 20%;
+				float: left;
+				color: @text-color;
+			}
+			.noo-social-content {
+				width: 80%;
+				// text-align: left;
+				float: left;
+			}
+			&:before {
+				height: 0;
+			}
+		}
+
+		.trainer-skill {
+			clear: both;
+			padding-top: 20px;
+		}
+
+		.noo-progress-bar {
+			float: right;
+			width: 80%;
+			margin-bottom: 20px;
+			.noo-single-bar .label-bar .noo-label-units {
+				top: -26px;
+				color: @brand-primary;
+			}
+			.noo-single-bar .noo-bar {
+				background-color: @brand-primary;
+			}
+			.noo-single-bar .label-bar .noo-progress-label {
+				font-style: normal;
+			}
+		}
+
+	}
+	
+}
+// content
+.trainer-content {
+	background: @gray-lighter;
+	padding: 50px 0;
+	.content {
+		.content-title {
+		  .custom-title();
+		}
+		ul {
+			list-style-type: none;
+			li {
+				.add-icon-before("\f00c");
+				line-height: @line-height-large;
+
+				&:before {
+					color: @brand-primary;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		padding: 30px;
+	}
+}
+
+//Shortcode noo-trainer
+
+.noo-trainers {
+
+	.trainers-header {		
+		.custom-title(18px);
+		margin-bottom: @grid-gutter-width;
+	}
+	// fillter
+	.masonry-filters {
+		float: none;
+		display: block;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			li {
+				float: none;
+				display: inline-block;
+				padding: 0;
+				margin: 5px 2px;
+				a {
+					display: block;
+					border: 2px solid #8f8f8f;
+					padding: 10px @grid-gutter-width;
+					&.selected,
+					&:hover
+					{
+						background: @brand-primary;
+						border-color: @brand-primary;
+						color: #fff;
+					}
+					@media (max-width: @screen-sm-max){
+						padding: 5px 10px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	// Feature transition
+	.hentry {
+		.trainer-item-wrap {
+			.content-featured {
+				overflow: hidden;
+				img {
+					.transition(transform 600ms ease 0s);
+					.scale(1, 1);
+
+				}
+			}
+			&:hover {
+				background: @brand-primary;
+				.content-featured {
+					img {
+						.scale(1.1, 1.1);
+					}
+				}
+			}
+			.content-wrap {
+				.trainer-category {
+					&:before {
+						background: @brand-primary;
+					}
+				}
+			}
+		}
+	}
+	.grid {
+		.hentry {
+			background: #fff;
+			&.masonry-item {
+				margin-bottom: @grid-gutter-width;
+				padding-bottom: 0;
+			}
+			.trainer-item-wrap {
+				background: @gray-lighter;
+				.transition(all 0.4s ease-in-out);
+				// .transition(transform 600ms ease 0s);
+
+				.content-wrap {
+					padding: @grid-gutter-width / 2 0;
+					text-align: center;
+					.content-title {
+						font-size: 20px;
+						text-transform: none;
+					}
+					.trainer-category {
+						position: relative;
+						padding-bottom: 10px;
+						margin-bottom: @grid-gutter-width / 2;
+						a {
+							font-weight: normal;
+							padding: 0 10px;
+							margin: 0;
+							position: relative;
+							&:before {
+								content: "/";
+								position: absolute;
+								right: 0;
+							}
+							&:last-child {
+								&:before {
+									content: "";
+								}
+							}			
+						}
+						&:before {
+							content: "";
+							width: 26px;
+							height: 1px;
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							margin-left: -13px;
+						}
+					}
+				}
+				&:hover {
+					.content-wrap {
+						.content-title {
+							a {
+								color: #fff;
+							}
+							
+						}
+						.trainer-category {
+							a {
+								color: #fff;
+							}
+							&:before {
+								background: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+		.col-md-3:nth-child(5),
+		.col-md-4:nth-child(4),
+		.col-md-6:nth-child(3){
+			clear: both;
+		}
+	}
+	.list {
+		.hentry {
+			padding: 0 !important;
+			.trainer-item-wrap {
+				&:hover {
+					background: none;
+				}
+				.content-wrap {
+					padding: 1.5em;
+					.trainer-info {
+						div > span {
+						    font-weight: bold;
+						    width: 40%;
+						    display: inline-block;
+						    @media (min-width: @screen-sm-max) {
+							    width: 30%;
+						    }
+						    @media (min-width: @screen-md-max) {
+							    width: 20%;
+						    }
+						}
+					}
+				}
+			}
+		}
+		@media(min-width: @screen-xs-max) {
+			.hentry {
+				.trainer-item-wrap {
+					display: table !important;
+					.content-featured {
+						width: 30%;
+						display: table-cell;
+						vertical-align: top;
+					}
+					@media(max-width: @screen-sm-max) {
+						.content-featured {
+							width: 40%;
+						}
+					}
+					@media(max-width: @screen-xs-max) {
+						.content-featured {
+							width: 50%;
+						}
+					}
+					.content-wrap {
+						display: table-cell;
+						vertical-align: top;
+						padding: 2.14286em;
+					}
+				}
+			}
+		}
+	}
+}

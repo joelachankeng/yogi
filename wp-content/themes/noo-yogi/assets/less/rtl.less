@@ -1,0 +1,381 @@
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+/*
+Theme Name: NOO Yogi
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See: https://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+.rtl{
+  direction: rtl;
+  *{
+    direction: rtl;
+  }
+  text-align: right;
+ .noo-event-widget .noo-event-item{
+    float: right; 
+ }
+  .noo-event-widget .noo-event-content{
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  .author-connect .connect-button i{
+   margin-right: 0px;
+   margin-left: 5px; 
+  }
+  .entry-tags a{
+   margin-right: 4px;
+   margin-left: 0px;
+  }
+  .read-more i{
+   margin-right: 0px;
+   margin-left: 4px;
+  }
+  .content-meta > span{
+    float: right;
+    i{
+      padding-right: 0;
+      padding-left: 3px;
+    }
+  }
+ 
+  &.single-noo_class{
+    .has-featured .content-featured{
+      float: none;
+    }
+     .noo_class .timetable_week{
+       table th,td{
+          text-align: right;
+       }
+     }
+     .single-sidebar .class-info-sidebar > div{
+      i{
+        padding-left: 8px;
+        padding-right: 0;
+      }
+      span{
+          float: left;
+          margin-left: 0;
+          margin-right: 5px;
+       }
+     }
+     #author-bio{
+      .author-avatar{
+        float: right;
+      }
+      .author-info{
+        margin-right: 150px;
+      }
+    }
+  }
+  .pagination .page-numbers.current,
+  .pagination a.page-numbers{
+    float: right;
+  }
+  .noo-gmaps ~ .contact-info ul li{
+    padding-right: 0;
+    padding-left: 50px;
+    line-height: 60px;
+    text-align: right;
+    i{
+      margin-right: 0;
+      margin-left: 30px;
+    }
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  .noo-slider .slider-control.prev-btn .slider-icon-prev:before,
+  .fc-icon-left-single-arrow:after{
+    content: "\f0da" !important;
+  }
+  .noo-slider .slider-control.next-btn .slider-icon-next:before,
+  .fc-icon-right-single-arrow:after{
+    content: "\f0d9" !important;
+  }
+  .fc-day-grid-event .fc-content{
+    direction: ltr;
+  }
+  .navbar-header{
+    float: right;
+  }
+  .navbar-collapse{
+    float: left;
+  }
+  .navbar-nav{
+    float: left;
+  }
+  .custom-title-home{
+    background-position: right top;
+    &:before{
+      right: 0;
+    }  
+  }
+  .our-services > div .noo-icon{
+    float: right;
+  }
+  form{
+    input:not([type="submit"]),
+    select,
+    textarea{
+      text-align: right;
+    }
+  }
+  a.go-to-top{
+    right: auto;
+    left: 20px;
+  }
+  .videos.posts-loop{
+    .col-sm-6:nth-child(1){
+      float: right;
+    }
+    .video .loop-item-wrap .loop-item-content{
+      padding-right: 90px;
+      .icon{
+        left: auto;
+        right: 0;
+      }
+    }
+    .loop-thumb .loop-thumb-content .carousel-inner .item > a{
+      padding-right: 90px;
+      .icon{
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  .wigetized .widget{
+    ul li,
+    ol li{
+      .fa,
+      .noo-vc-accordion .panel-title a:before{
+        float: right;
+        padding-right: 0;
+        padding-left: 20px;    
+      }    
+    }
+    .widget-title:before{
+      right: 0;
+    }
+  }
+  .wigetized ul.menu > li a:before{
+    float: right;
+    margin-top: 11px;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .colophon.wigetized input[type="submit"]{
+    float: right;
+    margin-left: 10px;
+  }
+  div.wpcf7-response-output{
+    margin-top: 40px;
+    clear: both;
+  }
+  .noo-page-heading .page-title:before{
+    right: 0;
+  }
+  .breadcrumb > li{
+    float: right;
+  }
+  .breadcrumb > li + li:before{
+    content: "\f104";
+    float: right;
+  }
+  .noo-sidebar .widget-title:before{
+    right: 0;
+  }
+  .posts-loop .posts-loop-title{
+    h3{
+      float: right;
+    }
+    a{
+      right: auto;
+      left: 30px;
+      &.list-mode{
+        left: 80px;
+        right: auto;
+      }
+    }
+  }
+  .posts-loop.list .loop-item-featured{
+    float: right;
+  }
+  .posts-loop.list .loop-item-content{
+    float: left;
+    width: 50%;
+  }
+  .search-class-weekday label{
+    text-align: left;
+  }
+  .trainer-content .content .content-title:before{
+    right: 0;
+  }
+  .trainer-details{
+    .col-md-4{
+      float: right;
+    }
+    .trainer-info{
+      > div{
+        &.trainer-position,
+        &.trainer-experience,
+        &.trainer-email,
+        &.trainer-biography{
+          span{  
+            float: right;
+          }
+        }
+      }
+      .trainer-social h5{
+        float: right;
+        text-align: right;
+      }
+      .trainer-category{
+        a{
+          padding-right: 0;
+          margin-right: 0;
+        }
+        &:before{
+          right: 0;
+        }
+      }
+      .view_class{
+        right: auto;
+        left: 15px;
+      }
+    }
+  }
+  .custom-title:before{
+    right: 0;
+  }
+  // Blog
+  .noo-slider{
+    .slider-indicators{
+      left: 10px;
+      right: auto;
+      a{
+        text-indent: 999em;
+      }
+    }
+  }
+  &.blog{
+    .has-featured .content-featured{
+      float: right;
+    }
+  }
+  .widget_latest_posts ul li img{
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .widget_tag_cloud .tagcloud a,
+  .widget_product_tag_cloud .tagcloud a{
+    margin: 0 0 5px 5px;
+  }
+  .widget_class_slider{
+    .slider-indicators{
+      left: 30px;
+      right: auto;
+      a{
+        text-indent: 999em;
+      }
+    }
+  }
+  .widget_categories ul li{
+    text-align: left;
+    a{
+      float: right;
+      &:before{
+        margin-right: 0;
+        margin-left: 15px;
+        float: right;
+        content: "\f0d9";
+      }
+    }
+  }
+  &.woocommerce{
+    .woocommerce-ordering{
+      float: left;
+    }
+    .woocommerce-result-count{
+      float: right;
+    }
+    span.out_of_stock{
+      left: 10px;
+      right: auto;
+    }
+    span.onsale{
+      right: -70px;
+      left: auto;
+      .rotate(45deg); 
+    }
+    div.product div.thumbnails a{
+      float: right;
+    }
+    &.single-product{
+      div.product{
+        div.images{
+          float: right;
+        }
+        form.cart {
+          div.quantity{
+            float: right;
+            margin-left: 1em;
+            margin-right: 0;
+          }
+          .button{
+            float: right;
+          }
+        }
+        .col-md-6:nth-child(1){
+          float: right;
+        }
+
+      }
+    }
+    p.stars a{
+      margin-right: 0;
+      margin-left: 1em;
+      text-indent: 9999px;
+    }
+  }
+  table.cart th,
+  table.cart td{
+    text-align: right !important;
+  }
+  .nav-tabs > li{
+    float: right;
+  }
+  .woocommerce .cart-collaterals{
+    h2{
+      text-align: left;
+    }
+    .cart_totals{
+      text-align: left;
+      float: left;
+    }
+  } 
+  .woocommerce table > thead > tr > th,
+  .woocommerce table > tbody > tr > th,
+  .woocommerce table > tfoot > tr > th,
+  .woocommerce table > thead > tr > td,
+  .woocommerce table > tbody > tr > td,
+  .woocommerce table > tfoot > tr > td{
+    text-align: right;
+  }
+  .woocommerce #payment ul.payment_methods li input{
+    text-align: left;
+  }
+  .woocommerce #payment #place_order{
+    float: left;
+  }
+}

@@ -1,0 +1,221 @@
+/**
+ * 4.0 - Basic Element
+ *  4.8 - footer
+ */
+
+.colophon {
+	.clearfix();
+}
+.colophon.wigetized {
+	position: relative;
+	background: @footer-widget-bg;
+	border-bottom: 1px solid @footer-widget-color-border;
+	> .container-boxed{
+		> div > div{
+			padding-top: 90px;
+			padding-bottom: 90px;
+			@media (max-width: @screen-xs-max) {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			@media (max-width: @screen-sm-max) {
+				padding-top: 50px;
+				padding-bottom: 30px;
+			}
+		}
+		@media (min-width: @screen-md-min) {
+			> div{
+				display: table;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				> div{
+					display: table-cell;
+					height: 100%;
+					vertical-align: top;
+					border-right: 1px solid @footer-widget-color-border;
+					float: none;
+					&:last-child{
+						border: none;
+					}
+				}
+			}
+		}
+		.mailchimp-widget{
+			margin: 0 auto;
+			button{
+				.transition(all .15s ease-in-out 0s);
+			}
+			.mc-email{
+				text-transform: none;
+				margin-top: 10px;
+				background: transparent;
+				.placeholder(#dbdada);
+				.transition(all .15s ease-in-out 0s);
+				&:focus{
+					border-color: #797979;
+				}
+			}
+		}
+	}
+
+	.text-right, .text-left, .text-center {
+		@media (max-width: @screen-xs-max) {
+			text-align: center;
+		}
+		
+	}
+
+	input, textarea {
+		text-transform: uppercase;
+		border-color: @border-color-base;
+	}
+}
+.wigetized{
+	.widget{
+		color: @footer-widget-color;
+		a{
+			color: @footer-widget-link-color;
+			&:hover{
+				color:  @footer-link-hover-color;
+			}
+		}
+		.widget-title{
+			color: @footer-widget-title;
+			font-size: @font-size-large;
+			font-weight: bold;
+			position: relative;
+			padding-bottom: 10px;
+			&:before{
+			  position: absolute;
+			  bottom: 0;
+			  content: "";
+			  width: 25px;
+			  height: 1px;
+			  background: @footer-widget-title;
+			}
+		}
+		.twitter_user{
+			&,
+			a{
+				color: #fff;
+			}
+		}
+		ul li,
+		ol li{
+			color: @footer-widget-color;
+			border:none;
+			line-height: 2em;
+			padding: 5px 0;
+			a{
+				color: @footer-widget-link-color;
+				&:hover {
+					color: @footer-link-hover-color;
+				}
+			}
+			.fa {
+				font-size: @font-size-large;
+				padding-right: @grid-gutter-width / 2;
+			}
+		}
+		&.widget_recent_entries li a {
+			 color: @footer-link-color;
+			 &:hover {
+				color: @footer-link-hover-color;
+			}
+		}
+
+	}
+	ul.menu {
+		//padding-left: 20px;
+		//list-style: disc;
+		//font-size: @font-size-large;
+		> li {
+			font-size: @font-size-base;
+			border-bottom: 1px dotted;
+			line-height: 2em;
+			padding: 0.7em 0;
+			a {
+				.add-icon-before("\f111");
+				&:before {
+					font-size: 8px;
+					padding-right: 10px;
+					opacity: 1;
+					top: -3px;
+				}
+			}
+			
+		}
+	}
+}
+.colophon.site-info {
+	background: @footer-bg;
+	.footer-menu{
+		padding: 0.3em 0;
+		border-top: 1px solid @footer-color-border;
+		.noo-menu{
+			display: table;
+			margin: 0 auto;
+			li {
+				a{
+					padding: ((10px /@font-size-root) + @font-unit) ((12px /@font-size-root) + @font-unit);
+					color:@footer-nav-color;
+					&:hover{
+						color: @footer-link-hover-color;
+					}
+				}
+				&.current-menu-item{
+					> a {
+						background:none; 
+					}
+				}
+			}
+		}
+	}
+	.footer-more{
+		padding: 20px 0;
+		color: @footer-color;
+		a{
+			color: @footer-link-color;
+			&:hover{
+				color: @footer-link-hover-color;
+			}
+		}
+		.noo-bottom-bar-content {
+			text-align: center;
+		}
+	}
+}
+
+//Go to top
+a.go-to-top{
+	&,
+	&:hover
+	&:focus{
+		background-color: @go-to-top-bg;
+	    .border-radius(@border-radius-base);
+	    bottom: 72px;
+	    .opacity(0);
+	    position: fixed;
+	    right: -60px;
+	    .transition(all 0.2s ease-in-out 0s);
+	    color: #fff;
+	    font-size: 40px;
+	    height: 50px;
+	    line-height: 1;
+	    position: fixed;
+	    text-align: center;
+	    width: 50px;
+	    z-index: 100;
+	    visibility: hidden;
+	    &.on {
+	    	.opacity(0.8);
+	    	visibility: visible;
+	    	right: 20px;
+	    	&:hover{
+	    		.opacity(1);
+	    	}
+		}
+	}
+}
+

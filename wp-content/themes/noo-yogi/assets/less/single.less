@@ -1,0 +1,24 @@
+/**
+ * 9.0 - Main file
+ * 	9.4 - single
+ */
+
+.single-sidebar{
+	background: #fff;
+	margin-bottom: @grid-gutter-width;
+	iframe{
+		width: 100%;
+		height: auto;
+	}
+}
+
+.content-summary{
+	padding: @grid-gutter-width;
+	margin-top: @grid-gutter-width;
+	border:1px solid @border-color-base;
+	background: @background-color-base;
+	margin-bottom: @grid-gutter-width;
+	@media (max-width: @screen-xs-max) {
+		padding: (@grid-gutter-width / 2);
+	}
+}

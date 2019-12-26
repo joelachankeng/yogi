@@ -1,0 +1,51 @@
+.noo-ajax-result{
+	font-size: @font-size-small;
+	margin-bottom: 10px;
+	display: block;
+}
+.user-membership-package{
+	text-align: center;
+	.user-membership-package-content{
+		width: 50%;
+		margin-top: 50px;
+		background: @background-color-base;
+		margin: 0 auto;
+		padding: @grid-gutter-width;
+		@media (max-width: @screen-xs-max){
+			width: 100%;
+		}
+		> .row{
+			margin-bottom:  (@grid-gutter-width / 2); 
+			text-align: left;
+		}
+	}
+}
+.noo-messages{
+	padding: @alert-padding;
+	margin-bottom: @grid-gutter-width;
+	border-width: 1px;
+	border-style: solid;
+	.border-radius(@alert-border-radius);
+	&.noo-message-{
+		&error{
+			background: @alert-danger-bg;
+			color: @alert-danger-text;
+			border-color: @alert-danger-border;
+		}
+		&success{
+			background: @alert-success-bg;
+			color: @alert-success-text;
+			border-color: @alert-success-border;
+		}
+		&notice{
+			background: @alert-info-bg;
+			color: @alert-info-text;
+			border-color: @alert-info-border;
+		}
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}

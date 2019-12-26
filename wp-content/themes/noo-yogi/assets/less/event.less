@@ -1,0 +1,108 @@
+// Event Listing page
+.noo-events {
+  .event-info {
+     > div {
+      line-height: @line-height-large;
+      border-bottom: 1px solid @border-color-base;
+      padding: 7px 0;
+      i {
+        color: @brand-primary;
+        padding-right: 5px;
+      }
+      &:last-child {
+        border: 0;
+      }
+     }
+  }
+  .loop-item-category { 
+    padding-top: @grid-gutter-width / 2;
+  }
+}
+
+.noo-event {
+  .event-header {
+    text-align: center;
+    padding-bottom: 50px;
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    .content-meta {
+      i {
+        color: @brand-primary;
+      }
+    }
+  }
+  .content-featured {
+    padding-bottom: @grid-gutter-width;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      .add-icon-before("\f00c");
+      line-height: @line-height-large;
+
+      &:before {
+        color: @brand-primary;
+        opacity: 1;
+      }
+    }
+  }
+
+  // Event Maps
+  .noo_event_map {
+    position: relative;
+    #noo_event_google_map {
+      height: 600px; 
+      margin-bottom: 30px; 
+      overflow: hidden; 
+      position: relative; 
+      width: 100%;
+    }
+    .event-info {
+      position: absolute;
+      top: 80px;
+      right: 20%;
+      background: #fff;
+      padding: @grid-gutter-width;
+      &.clear-absolute {
+        position: relative !important;
+        top: 0;
+        right: 0;
+      }
+      @media (max-width: @screen-xs-max) {
+        position: static;
+      }
+      h5 {
+        .custom-title(18px);
+      }
+      > div {
+        line-height: @line-height-large;
+        border-bottom: 1px solid @border-color-base;
+        padding: 5px 0;
+        i {
+          color: @brand-primary;
+          padding-right: 10px;
+        }
+        &:last-child {
+          border: 0;
+        }
+        &.noo-social{
+          padding-top: 1em;
+          a{
+            i{
+              color: @text-color;
+              padding-right: 0;
+            }
+            &:hover{
+              i{
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

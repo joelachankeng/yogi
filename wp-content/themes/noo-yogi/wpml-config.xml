@@ -1,0 +1,171 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="copy">_noo_body_css</custom-field>
+        <custom-field action="copy">_heading_image</custom-field>
+        <custom-field action="copy">_noo_wp_page_menu_center_vertical</custom-field>
+        <custom-field action="copy">_noo_wp_page_hide_page_title</custom-field>
+        <custom-field action="copy">_noo_wp_page_sidebar</custom-field>
+        <custom-field action="copy">_noo_wp_page_meta_box_home_slider</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_rev</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_position</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_custom_bg</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_bg_video</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_bg_video_poster</custom-field>
+        <custom-field action="copy">_noo_wp_page_slider_above_scroll_bottom</custom-field>
+
+        <custom-field action="copy">_noo_wp_post_gallery_preview</custom-field>
+        <custom-field action="copy">_noo_wp_post_video_m4v</custom-field>
+        <custom-field action="copy">_noo_wp_post_video_ogv</custom-field>
+        <custom-field action="copy">_noo_wp_post_video_embed</custom-field>
+        <custom-field action="copy">_noo_wp_post_video_ratio</custom-field>
+        <custom-field action="copy">_noo_wp_post_video_preview</custom-field>
+        <custom-field action="copy">_noo_wp_post_audio_mp3</custom-field>
+        <custom-field action="copy">_noo_wp_post_audio_oga</custom-field>
+        <custom-field action="copy">_noo_wp_post_audio_embed</custom-field>
+        <custom-field action="translate">_noo_wp_post_quote</custom-field>
+        <custom-field action="translate">_noo_wp_post_quote_citation</custom-field>
+        <custom-field action="copy">_noo_wp_post_link</custom-field>
+        <custom-field action="copy">_noo_wp_post_global_setting</custom-field>
+        <custom-field action="copy">_noo_wp_post_override_layout</custom-field>
+        <custom-field action="copy">_noo_wp_post_layout</custom-field>
+        <custom-field action="copy">_noo_wp_post_sidebar</custom-field>
+        <custom-field action="copy">_noo_wp_post_image</custom-field>
+        <custom-field action="copy">_noo_wp_post_name</custom-field>
+        <custom-field action="translate">_noo_wp_post_position</custom-field>
+
+        <custom-field action="translate">_noo_trainer_position</custom-field>
+        <custom-field action="copy">_noo_trainer_experience</custom-field>
+        <custom-field action="copy">_noo_trainer_email</custom-field>
+        <custom-field action="copy">_noo_trainer_position</custom-field>
+        <custom-field action="copy">_noo_trainer_facebook</custom-field>
+        <custom-field action="copy">_noo_trainer_twitter</custom-field>
+        <custom-field action="copy">_noo_trainer_google</custom-field>
+        <custom-field action="copy">_noo_trainer_pinterest</custom-field>
+
+        
+        <custom-field action="copy">_open_date</custom-field>
+        <custom-field action="copy">_open_time</custom-field>
+        <custom-field action="copy">_close_time</custom-field>
+        <custom-field action="translate">_trainer</custom-field>
+        <custom-field action="copy">_use_manual_settings</custom-field>
+        <custom-field action="copy">_manual_settings</custom-field>
+        <custom-field action="copy">_address</custom-field>
+        <custom-field action="copy">_number_of_weeks</custom-field>
+        <custom-field action="copy">_number_day</custom-field>
+        <custom-field action="copy">_use_advanced_multi_time</custom-field>
+        <custom-field action="copy">_advanced_multi_time</custom-field>
+        <custom-field action="copy">_open_time_0</custom-field>
+        <custom-field action="copy">_open_time_1</custom-field>
+        <custom-field action="copy">_open_time_2</custom-field>
+        <custom-field action="copy">_open_time_3</custom-field>
+        <custom-field action="copy">_open_time_4</custom-field>
+        <custom-field action="copy">_open_time_5</custom-field>
+        <custom-field action="copy">_open_time_6</custom-field>
+        <custom-field action="copy">_closed_time_0</custom-field>
+        <custom-field action="copy">_closed_time_1</custom-field>
+        <custom-field action="copy">_closed_time_2</custom-field>
+        <custom-field action="copy">_closed_time_3</custom-field>
+        <custom-field action="copy">_closed_time_4</custom-field>
+        <custom-field action="copy">_closed_time_5</custom-field>
+        <custom-field action="copy">_closed_time_6</custom-field>
+        <custom-field action="translate">_trainer_0</custom-field>
+        <custom-field action="translate">_trainer_1</custom-field>
+        <custom-field action="translate">_trainer_2</custom-field>
+        <custom-field action="translate">_trainer_3</custom-field>
+        <custom-field action="translate">_trainer_4</custom-field>
+        <custom-field action="translate">_trainer_5</custom-field>
+        <custom-field action="translate">_trainer_6</custom-field>
+        <custom-field action="copy">_address_0</custom-field>
+        <custom-field action="copy">_address_1</custom-field>
+        <custom-field action="copy">_address_2</custom-field>
+        <custom-field action="copy">_address_3</custom-field>
+        <custom-field action="copy">_address_4</custom-field>
+        <custom-field action="copy">_address_5</custom-field>
+        <custom-field action="copy">_address_6</custom-field>
+        <custom-field action="copy">_manual_date</custom-field>
+        <custom-field action="copy">_manual_open_time</custom-field>
+        <custom-field action="copy">_manual_closed_time</custom-field>
+        <custom-field action="copy">_manual_trainer</custom-field>
+        <custom-field action="copy">_manual_address</custom-field>
+        <custom-field action="translate">_register_link</custom-field>
+
+        <custom-field action="copy">_noo_event_author</custom-field>
+        <custom-field action="copy">_noo_event_avatar</custom-field>
+        <custom-field action="copy">_noo_event_phone</custom-field>
+        <custom-field action="copy">_noo_event_website</custom-field>
+        <custom-field action="copy">_noo_event_email</custom-field>
+        <custom-field action="copy">_noo_event_position</custom-field>
+        <custom-field action="copy">_noo_event_organizers</custom-field>
+        <custom-field action="copy">_noo_event_event_bg_color</custom-field>
+        <custom-field action="copy">_noo_event_start_date</custom-field>
+        <custom-field action="copy">_noo_event_start_time</custom-field>
+        <custom-field action="copy">_noo_event_end_date</custom-field>
+        <custom-field action="copy">_noo_event_end_time</custom-field>
+        <custom-field action="copy">_noo_event_gmap</custom-field>
+        <custom-field action="copy">_noo_event_address</custom-field>
+        <custom-field action="copy">_noo_event_gmap_latitude</custom-field>
+        <custom-field action="copy">_noo_event_gmap_longitude</custom-field>
+        <custom-field action="translate">_noo_event_register_link</custom-field>
+        
+        <custom-field action="copy">_noo_trainer_position</custom-field>
+        <custom-field action="copy">_noo_trainer_experience</custom-field>
+        <custom-field action="copy">_noo_trainer_email</custom-field>
+        <custom-field action="copy">_noo_trainer_phone</custom-field>
+        <custom-field action="copy">_noo_trainer_biography</custom-field>
+        <custom-field action="copy">_noo_trainer_skill</custom-field>
+        <custom-field action="copy">_noo_trainer_facebook</custom-field>
+        <custom-field action="copy">_noo_trainer_google</custom-field>
+        <custom-field action="copy">_noo_trainer_twitter</custom-field>
+        <custom-field action="copy">_noo_trainer_pinterest</custom-field>
+
+        <custom-field action="copy">_author</custom-field>
+        <custom-field action="copy">_address</custom-field>
+        <custom-field action="copy">_phone</custom-field>
+        <custom-field action="copy">_website</custom-field>
+        <custom-field action="copy">_email</custom-field>
+        <custom-field action="copy">_gmap</custom-field>
+        <custom-field action="copy">_gmap_latitude</custom-field>
+        <custom-field action="copy">_gmap_longitude</custom-field>
+        <custom-field action="copy">_gmap_street_view</custom-field>
+
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">testimonial</custom-type>
+        <custom-type translate="1">noo_trainer</custom-type>
+        <custom-type translate="1">noo_class</custom-type>
+        <custom-type translate="1">noo_event</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">class_category</taxonomy>
+        <taxonomy translate="1">class_level</taxonomy>
+        <taxonomy translate="1">event_category</taxonomy>
+        <taxonomy translate="1">trainer_category</taxonomy>
+        <taxonomy translate="1">testimonial_category</taxonomy>
+    </taxonomies>
+
+    <admin-texts>
+        <key name="theme_mods_noo-hermosa">
+            
+            <key name="noo_blog_heading_title"/>
+            <key name="noo_blog_social_title"/>
+
+            <key name="noo_class_heading_title"/>
+            <key name="noo_classes_filter_title"/>
+            <key name="noo_class_social_title"/>
+
+            <key name="noo_trainer_heading_title"/>
+            <key name="noo_trainer_heading_desc"/>
+
+            <key name="noo_shop_heading_title"/>
+            <key name="noo_shop_heading_desc"/>
+            <key name="noo_events_heading_title"/>
+            <key name="noo_event_social_title"/>
+            <key name="noo_trainer_heading_title"/>
+
+            <key name="noo_bottom_bar_content"/>
+            <key name="noo_top_bar_content"/>
+        </key>
+    </admin-texts>
+</wpml-config>
+
+

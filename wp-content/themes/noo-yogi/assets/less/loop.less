@@ -1,0 +1,254 @@
+/**
+ * 9.0 - Main file
+ * 	9.3 - loop
+ */
+
+.posts-loop {
+    // Item Category
+    .loop-item-category {
+        padding-bottom: 10px;
+        padding-top: 5px;
+        color: @brand-primary;
+        a {
+            color: @brand-primary;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    .posts-loop-title {
+        position: relative;
+        margin-bottom: @grid-gutter-width;
+        background: @gray-lighter;
+        padding: @grid-gutter-width;
+        text-transform: uppercase;
+        margin: 0 @grid-gutter-width / 2 @grid-gutter-width @grid-gutter-width / 2;
+        h3 {
+            margin: 0;
+            font-size: @font-size-large;
+            text-transform: uppercase;
+            float: left;
+        }
+        .clearfix();
+        a {
+            background-color: #fff;
+            font-weight: bold;
+            .border-radius(@border-radius-base);
+            padding: @padding-base-vertical @padding-base-horizontal;
+            position: absolute;
+            right: @grid-gutter-width;
+            top: 50%;
+            color: @text-color;
+            .translate(0, -50%);
+            @media (max-width: @screen-xs-max) {
+                display: none;
+            }
+            &.list-mode {
+                right: 80px;
+            }
+            &.active {
+                color: @brand-primary;
+            }
+        }
+    }
+    .loop-item-title {
+        margin-top: 0;
+        font-size: @font-size-large;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+    .loop-item-excerpt {
+        margin-top: 1.5rem;
+    }
+    .content-meta {
+        margin-bottom: 0.7rem;
+        margin-top: 0.7rem;
+    }
+    .loop-item-featured {
+        .is_featured {
+            position: absolute;
+            background: @brand-primary;
+            color: @white;
+            padding: 4px 10px;
+            margin: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .loop-item-action {
+        margin-top: @grid-gutter-width;
+    }
+    .hentry {
+        background: transparent;
+    }
+    &.grid {
+        .loop-item {
+            padding: 0 (@grid-gutter-width / 2);
+            background: transparent;
+            border: none;
+            padding-bottom: @grid-gutter-width;
+            &:after {
+                display: none;
+            }
+        }
+        .loop-item-wrap {
+            position: relative;
+            height: 100%;
+            background: #fff;
+        }
+        .loop-item-action {
+            text-align: center;
+        }
+        .loop-item-content {
+            background: @background-color-base;
+        }
+        .loop-item-content-summary {
+            padding: @line-height-computed;
+        }
+        .loop-item-action {
+            margin-top: 0;
+        }
+    }
+    &.list {
+        .loop-item {
+            @media (max-width: @screen-xs-max) {
+                padding: (@grid-gutter-width / 2);
+            }
+        }
+        .loop-item-wrap {
+            display: table;
+            width: 100%;
+            @media (max-width: @screen-xs-max) {
+                display: block;
+            }
+        }
+        .loop-item-featured {
+            display: table-cell;
+            vertical-align: top;
+            //float: left;
+            width: 50%;
+            @media (max-width: @screen-xs-max) {
+                display: block;
+                width: 100%;
+            }
+        }
+        .loop-item-content {
+            // margin-left: 300px;
+            display: table-cell;
+            vertical-align: top;
+            padding: @grid-gutter-width;
+            @media (max-width: @screen-sm-max) {
+                padding: @grid-gutter-width / 2 @grid-gutter-width;
+            }
+            @media (max-width: @screen-xs-max) {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    &.slider {
+        position: relative;
+        .loop-item {
+            padding: 0;
+            &:after {
+                display: none;
+            }
+        }
+        .loop-item-wrap {
+            .clearfix();
+        }
+        .loop-item-title {
+            font-size: ((30px / @font-size-root) + @font-unit);
+            line-height: 1.2;
+        }
+        @media (min-width: @screen-xs-min) {
+            .loop-item-content, .loop-item-featured {
+                float: left;
+                width: 50%;
+            }
+            .loop-item-content {
+                padding: @grid-gutter-width;
+            }
+        }
+        @media (max-width: @screen-md-max) {
+            .loop-item-content {
+                padding: (@grid-gutter-width / 2);
+            }
+            .loop-item-title {
+                font-size: @font-size-large;
+            }
+        }
+        @media (max-width:800px) {
+            .carousel-inner {
+                cursor: move;
+            }
+        }
+        .loop-thumb-label {
+            font-weight: bold;
+            width: percentage((5 / @grid-columns));
+            >span {
+                display: inline-block;
+                padding-left: @grid-gutter-width;
+                @media (max-width: @screen-md-max) {
+                    padding-left: (@grid-gutter-width / 2);
+                }
+            }
+        }
+        .loop-thumb-content {
+            .carousel-inner {
+                margin: 0 -8px;
+                width: auto;
+                margin-right: (@grid-gutter-width * 2);
+                @media (max-width: @screen-md-max) {
+                    margin-right: (@grid-gutter-width * 1.5);
+                }
+            }
+            .item {
+                >a {
+                    float: left;
+                    width: percentage((4 / @grid-columns));
+                    padding: 0 8px;
+                    img {
+                        width: 100%;
+                        .border-radius(@border-radius-base);
+                    }
+                }
+            }
+            .carousel-indicators {
+                margin: 0;
+                left: auto;
+                right: @grid-gutter-width;
+                top: 0;
+                width: auto;
+                @media (max-width: @screen-md-max) {
+                    right: (@grid-gutter-width / 2);
+                }
+                li {
+                    width: 12px;
+                    height: 12px;
+                    margin: 7px 0;
+                    display: block;
+                    border-color: transparent;
+                    background: #e3e3e3;
+                    &.active {
+                        border-color: @brand-primary;
+                        background: @brand-primary;
+                        border-width: 2px;
+                        position: relative;
+                        &:before {
+                            border: 2px solid #fff;
+                            border-radius: 50%;
+                            bottom: 0;
+                            content: "";
+                            left: 0;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
