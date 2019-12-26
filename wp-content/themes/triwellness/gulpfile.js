@@ -33,7 +33,7 @@ gulp.task('default', ['run', 'watch']);
 
 const paths= {
     scripts: [
-        './src/js/vendor/'
+        './src/js/vendor/slickjs.min.js',
     ],
 };
 
@@ -61,7 +61,7 @@ gulp.task('scripts', () => {
         .pipe(uglify().on('error', function(e) {
             console.log(e);
         }))
-        .pipe(rename('app.min.css'))
+        .pipe(rename('app.min.js'))
         .pipe(gulp.dest(`./dist/`))
         .pipe(browserSync.stream());
 });
