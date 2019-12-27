@@ -34,6 +34,7 @@ gulp.task('default', ['run', 'watch']);
 const paths= {
     scripts: [
         './src/js/vendor/slickjs.min.js',
+        './src/js/vendor/icon.min.js',
     ],
 };
 
