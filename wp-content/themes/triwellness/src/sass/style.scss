@@ -8,3 +8,14 @@ Template: twentyseventeen
 */
 
 @import 'vendor/tailwind';
+@import 'vendor/slickjs.scss';
+
+@import 'partials/base';
+@import 'partials/fonts';
+@import 'partials/overrides';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/content';
+@import 'partials/page';
+@import 'partials/blocks';
+@import 'partials/responsive';

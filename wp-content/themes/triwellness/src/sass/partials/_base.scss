@@ -1,0 +1,36 @@
+$primary: #a5baca;
+$secondary: #769e90;
+$dark-grey: #2a2a2a;
+$white: #ffffff;
+$black: #000;
+$text-color: #303e48;
+
+.color-primary {
+    color: $primary !important;
+    &.hover {
+        &:hover {
+            color: $secondary !important;
+        }
+    }
+}
+
+.color-secondary {
+    color: $secondary !important;
+    &.hover {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+}
+
+.hover-secondary {
+    &:hover {
+        color: $secondary !important;
+    }
+}
+
+.hover-primary {
+    &:hover {
+        color: $primary !important;
+    }
+}
